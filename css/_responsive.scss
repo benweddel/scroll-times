@@ -1,0 +1,569 @@
+@media all and (max-width: 899px) {
+  //General Responsive Changes
+  $pageSpr: 1px solid #CCC;
+
+  #bibCore,
+  .progressBar,
+  #scrollText,
+  #startText,
+  .spacer1,
+  #storyText3,
+  #bibLove,
+  #iconServer,
+  #dataTrnf,
+  #libIcons,
+  #iconComp,
+  #signImg {
+    display: none;
+  }
+
+  .html_header_top.html_header_sticky #top #wrap_all #main {
+  padding-top: 50px!important;
+  }
+
+  .tagline {
+    position: static;
+  }
+  .sceneContain {
+    height: auto;
+    padding-bottom: 40px;
+    border-bottom: $pageSpr;
+  }
+
+  .overflow {
+    overflow: visible;
+  }
+  .tagline {
+    font-size: 28px!important;
+  }
+  #bibTitle {
+    span {
+      font-size: 28px!important;
+    }
+  }
+
+  //Header/Nav Changes Responsive
+  #mobile-advanced,
+  #advanced_menu_hide {
+    display: block;
+  }
+  #advanced_menu_toggle {
+    display: block;
+    position: fixed;
+    top: 61px;
+    right: 0;
+    left: auto;
+    background-color: rgba(0,0,0,0);
+    color: $primaryColour;
+  }
+  #header_main {
+    background: #FFF;
+  }
+  .main_menu {
+    display: none;
+  }
+  #requestBtn {
+    display: none;
+  }
+  .logo {
+   padding-top: 8px!important;
+  }
+
+  //Scene Responsive Changes
+  //Drawer Section Responsive
+  #bibTitle {
+    margin-bottom: 80px;
+  }
+  #introText {
+    margin-bottom: 0;
+  }
+  .drawerContainer2 {
+    height: 170px;
+  }
+  #drawerContainer {
+    height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+    border-bottom: $pageSpr;
+  }
+  //Features Section Responsive
+  #bibCoreF {
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .bibFeature {
+    position: static;
+    float: left;
+    width: 40%;
+    margin: 0 5%;
+    img {
+      display: none;
+    }
+  }
+  .featDesc {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #bibFExplore,
+  #bibFDoMore {
+    float: right;
+    width: 40%;
+  }
+
+  #bibFSearch,
+  #bibFExplore {
+    height: 110px;
+  }
+
+  //Patron Section Responsive
+  #patronLogos,
+  .patronLogos2 {
+    position: static;
+  }
+  .patronLogosL,
+  .patronLogosR {
+    float: none;
+    margin: 0 auto 30px auto;
+    width: 65%;
+    .logo1 {
+      padding: 0 20px;
+    }
+  }
+  .patronLogos2 {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .logo2 {
+    position: static;
+    float: left;
+    width: 33.33%;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  //Library Section Responsive
+  #bibLibrary {
+    section {
+      width: 70%
+    }
+  }
+
+  #libraryText1,
+  #libraryText2 {
+    position: static;
+  }
+  #bibCoreL {
+    position: relative;
+    display: block;
+    height: 280px;
+    width: 280px;
+  }
+  #libraryText1,
+  #libraryText2 {
+    margin: 0 auto;
+    text-align: center;
+    p {
+      font-size: 16px;
+    }
+  }
+  #libraryText2 {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  //Connect Section Responsive
+  .connectStat {
+    position: static;
+  }
+  #connectGrp2,
+  .cLibr2,
+  .cLib1,
+  .cUser2,
+  .cUser4,
+  .cUser5,
+  .cUser6 {
+    display: none;
+  }
+  #bibCoreC {
+    display: block;
+    top: 20px;
+  }
+  #connectGrp1 {
+    opacity: 1;
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+  }
+
+  .cLibr1,
+  .cLibr3 {
+    top: 5px;
+  }
+  .cLibr1,
+  .cUser1 {
+    left: -13px;
+  }
+  .cLibr3,
+  .cUser3 {
+    left: 300px;
+  }
+  .cUser1,
+  .cUser3 {
+    top: 215px;
+  }
+  .cLib3 {
+    top: 100px;
+    left: -60px;
+  }
+  .cLib2 {
+    top: 100px;
+    left: 330px;
+  }
+  #connectStat3 {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+
+  //Story Section Responsive
+  #storyTag3 {
+    display: none;
+  }
+  #storyTag3b {
+    display: block;
+  }
+  #perfink,
+  #bibPulse {
+    position: static;
+  }
+  #storyTag1,
+  #storyTag2 {
+    width: 100%;
+  }
+
+  #perfink {
+    margin-top: 25px;
+    padding-left: 4px;
+  }
+
+  #pulseContainer {
+    display: block;
+    position: static;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    background: rgba(81,178,161,0.3);
+    margin: 0 auto;
+  }
+  #bibStory1 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  #storyTag2 {
+    margin-bottom: 30px;
+  }
+  #bibCoreS {
+    display: block;
+    position: static;
+    top: -295px;
+  }  
+  #storyText2R {
+    opacity: 1;
+  }
+  #storyTag4 {
+    margin-bottom: 0;
+  }
+  #bibCoreS2 {
+    display: block;
+    position: relative;
+    top: 0;
+  }
+  
+  //Catalog Section Responsive
+  #bibCatalog {
+    .catalogWrp {
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+  #catalogTag {
+    display: block;
+    position: static;
+  }
+  .cLrg,
+  .cSm {
+    height: 140px;
+    width: 140px;
+    h2 {
+      font-size: 20px!important;
+      line-height: 1.1em;
+    }
+    h4 {
+      line-height: 10px;
+    }
+  }
+  .cBubble {
+    float: left;
+    position: static;
+    margin: 5px;
+  }
+
+  //Products Page Catalog
+  .products-page {
+    #bibCatalog {
+      height: auto;
+      margin-top: 40px;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .productPage {
+    #bibCore {
+      top: -240px;
+    }
+    #bibCCMS,
+    #bibCDigital {
+      top: 20px;
+    }
+    #bibCSummer,
+    #bibCReader {
+      top: 180px;
+    }
+    #bibCEvents,
+    #bibCSuggest {
+      top: 340px;
+    }
+    #bibCMobile,
+    #bibCBuy {
+      top: 500px;
+    }
+  }
+
+  //Patron Love Section Responsive
+  #patronLove {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  #patronTag {
+    display: block;
+  }
+  
+  .feedback {
+    position: relative;
+    margin: 0 0 20px 30px;
+    width: 90%;
+  }
+  #feedback1,
+  #feedback2,
+  #feedback3,
+  #feedback4,
+  #feedback5,
+  #feedback6 {
+    top: 0;
+    left: 0;
+  }
+  a.pl-button {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: static;
+  }
+
+  //Library Logos Section Responsive
+  #libLogos {
+    margin: 80px 0 50px 0;
+    height: auto;
+  }
+  .libLogos {
+    display: block;
+  }
+  .bx-wrapper {
+    display: none;
+  }
+  a.libButton {
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+
+  //Footer Section Responsive
+  
+  footer.fpFooter {
+    padding-top: 100px;
+    a.demoButton {
+      margin-bottom: 80px;
+    }
+    li {
+      width: 50%;
+      margin-bottom: 50px;
+    }
+  }
+
+
+  #header_meta {
+    display: none;
+  }
+  #header_main {
+    .container {
+      height: 46px!important;
+    }
+    background: #F7F7F7;
+  }
+  #advanced_menu_toggle {
+    border: none;
+    top: 23px;
+    &:hover {
+      color: #F7F7F7;
+    }
+  }
+  .responsive {
+     .logo {
+       // height: 46px!important;
+       // padding-top: 8px!important;
+       position: fixed;
+       left: 10px;
+     }
+     .logo img {
+       width: 147px;
+     }
+     #top #wrap_all {
+       #header {
+         position: fixed;
+         top: 0;
+       }
+     }
+   }
+   #mobile-advanced {
+     width: 50%;
+     right:-50%;
+   }
+   #advanced_menu_hide {
+     right: 23px;
+   }
+   .avia_transform3d .show_mobile_menu #mobile-advanced{
+   -webkit-transform:  translate3d(-100%, 0, 0);
+   -moz-transform:   translate3d(-100%, 0, 0);
+   transform:      translate3d(-100%, 0, 0);
+   }
+}
+
+@media all and (max-width: 768px) {
+
+  .responsive {
+    #header_main .container {
+      height: 46px!important;
+    }
+     .logo {
+      height: 46px!important;
+      padding-top: 0px!important;
+     }
+   }
+   
+  //hides scroll to top button
+  a#scroll-top-link {
+    display: none;
+  }
+
+  $drOffset3: 50px;
+  .drawerContainer2 {
+    width: 460px;
+  }
+  #drBack {
+    left: 208px+$drOffset3;
+  }
+  #drLeft {
+    left: 42px+$drOffset3;
+  }
+  #drRight {
+    left: 182px+$drOffset3;
+  }
+  #drBottom {
+    left: 58px+$drOffset3;
+  }
+  #drFront {
+    left: 0px+$drOffset3;
+  }
+  #drCard1 {
+    left: 102px+$drOffset3;
+  }
+  #drCard2 {
+    left: 120px+$drOffset3;
+  }
+  #drCard3 {
+    left: 138px+$drOffset3;
+  }
+  #drCard4 {
+    left: 156px+$drOffset3;
+  }
+  #drCard5 {
+    left: 174px+$drOffset3;
+  }
+  #drCard6 {
+    left: 192px+$drOffset3;
+  }
+  #drCard7 {
+    left: 210px+$drOffset3;
+  }
+  #drCard8 {
+    left: 228px+$drOffset3;
+  }
+  .bibFeature {
+    width: 40%;
+    .featDesc {
+      width: 100%;
+    }
+  }
+  .featDesc {
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .feedback {
+    p {
+      font-size: 13px;
+    }
+    .oQuote,
+    .cQuote {
+      font-size: 44px;
+    }
+    .oQuote {
+      left: -24px;
+    }
+    .cQuote {
+      top: 15px;
+    }
+  }
+    
+  #feedback4,
+  #feedback6 {
+    display: none;
+  }
+  a.libButton {
+    margin-top: 60px;
+  }
+  //blog page responsive
+  .page-template-blog-page {
+    #taxonomy-tags {
+      display: none;
+    }
+    #tag-page .container .av-content-full.units {
+      width: 100%;
+    }
+  }
+
+}
+
+@media all and (max-width: 767px) {
+  
+}

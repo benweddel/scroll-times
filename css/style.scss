@@ -1,4 +1,1868 @@
-h1 {
-  color: red;
-  margin: 21px;
+/*
+Theme Name: Enfold Child
+Description: A <a href='http://codex.wordpress.org/Child_Themes'>Child Theme</a> for the Enfold Wordpress Theme. If you plan to do a lot of file modifications we recommend to use this Theme instead of the original Theme. Updating will be much easier then.
+Version: 1.0
+Author: Kriesi
+Author URI: http://www.kriesi.at
+Template: enfold
+*/
+
+/*Add your own styles here:*/
+
+/* General Custom CSS */
+
+@import "starter";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Amatic+SC:700);
+
+$baseFont: 'Open Sans', sans-serif;
+$fontSize: 20px;
+$fontWeight: 300;
+$fontColour: #333;
+
+$lightFont: #8D8D8E;
+$medFont: #3F4344;
+$darkFont: #000;
+
+$primaryColour: #51B2A1;
+
+//General Theme Overrides
+
+//H1 bold
+.modern-quote .av-special-heading-tag {
+  font-weight: 800;
+}
+
+h2 {
+padding-top: 10px;
+font-weight: 600 !important;
+}
+p {
+font-size: 16px;
+}
+.post-entry li {
+  font-size: 16px;
+}
+
+body {
+  font-family: $baseFont;
+}
+
+.container {
+  max-width: 1024px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 50px;
+  clear: both;
+}
+
+.template-page .entry-content-wrapper {
+  h1, h2, h3, h4, h5 {
+    text-transform: none;
+  }
+}
+
+.main_color {
+  border: none;
+  h2 {
+    color: #3f4344;
+  }
+}
+
+.main_color h3 {
+font-size: 16px;
+color: #50b2a0;
+}
+.modern-quote h3.av-special-heading-tag {
+  font-weight: 600;
+}
+
+.html_stretched #wrap_all,
+html, #scroll-top-link {
+  background-color: #fff;
+}
+
+#resumator-logo {
+  display: none;
+}
+
+//Removes green underline on menu item hover
+.avia-menu-fx, .current-menu-item>a>.avia-menu-fx, li:hover .current_page_item>a>.avia-menu-fx, {
+display: none;
+}
+
+//Header
+.av-main-nav {
+  li.hide-menu {
+    display: none;
+  }
+}
+
+header {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 50px;
+  .logo {
+    display: inline-block;
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 20px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+//Mobile Menu overrides
+@media all and (min-width: 900px) {
+  .home {
+    #advanced_menu_toggle {
+      position: fixed;
+      top: 20px;
+      left: 10px;
+    }
+    #mobile-advanced {
+      width: 350px;
+      left:-350px;
+    }
+    #advanced_menu_hide {
+      left: 23px;
+    }
+  }
+}
+
+.avia_desktop {
+  #advanced_menu_toggle {
+    color: $primaryColour;
+    &:hover {
+      background-color: $primaryColour;
+      border-color: $primaryColour;
+    }
+  }
+  #advanced_menu_hide {
+    &:hover {
+      background-color: $primaryColour;
+      border-color: $primaryColour;
+    }
+  }
+}
+#mobile-advanced,
+#advanced_menu_hide {
+  display: block;
+}
+
+.home .header_color .header_bg{
+ background-color: rgba(255,255,255,0);
+}
+
+.avia_transform3d .show_mobile_menu #mobile-advanced{
+-webkit-transform:  translate3d(100%, 0, 0);
+-moz-transform:   translate3d(100%, 0, 0);
+transform:      translate3d(100%, 0, 0);
+}
+#mobile-advanced a:before {
+  display: none;
+}
+
+.logo {
+  padding-top: 9px!important;
+}
+
+ul.sub-menu {
+  border-top: none!important;
+}
+
+#header_main {
+  border-bottom: none;
+}
+
+.avia-menu-text {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+//products fancybox styling
+#fancybox-frame {
+  border: 10px solid black;
+}
+
+
+//products custom nav
+#menu-productnav {
+  margin: 0;
+  margin: 40px 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+  li {
+    display: inline;
+    a {
+      color: #fff;
+      font-size: 14px;
+      padding: 2px 18px;
+      position: relative;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .pCore {
+    background: $primaryColour;
+  }
+  .menu-core {
+    a {
+      background: $primaryColour;
+      &:after {
+        border-top-color: $primaryColour;
+      }
+    }
+  }
+  .menu-mobile {
+    a {
+      background: #8F6583;
+      &:after {
+        border-top-color: #8F6583;
+      }
+    }
+  }
+  .menu-summer {
+    a {
+      background: #F1BF3E;
+      &:after {
+        border-top-color: #F1BF3E;
+      }
+    }
+  }
+  .menu-cms {
+    a {
+      background: #DC3E27;
+      &:after {
+        border-top-color: #DC3E27;
+      }
+    }
+  }
+  .menu-digital {
+    a {
+      background: #316B7B;
+      &:after {
+        border-top-color: #316B7B;
+      }
+    }
+  }
+  .menu-events {
+    a {
+      background: #F59686;
+      &:after {
+        border-top-color: #F59686;
+      }
+    }
+  }
+  .menu-reader {
+    a {
+      background: #6B3B48;
+      &:after {
+        border-top-color: #6B3B48;
+      }
+    }
+  }
+  .menu-buy {
+    a {
+      background: #81909B;
+      &:after {
+        border-top-color: #81909B;
+      }
+    }
+  }
+  .menu-suggest {
+    a {
+      background: #CCDB29;
+      &:after {
+        border-top-color: #CCDB29;
+      }
+    }
+  }
+  .current-menu-item {
+    a {
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        border-top-width: 10px;
+        border-top-style: solid;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+      }
+    }
+  }
+}
+
+//darken library menu item when on sub-pages, due to parent-redirect breaking style
+.page-template-library-page .current-page-ancestor a span {
+  color: #333;
+}
+
+//Front page custom styles
+.fpWrapper {
+  color: $darkFont;
+  font-family: $baseFont;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  h1,h2,h3,h4,h5 {
+    margin: $fontSize*1.4 0;
+    font-family: $baseFont;
+  } 
+  p {
+    // line-height: $fontSize*1.6;
+    margin: $fontSize*1.4 0;
+  }
+}
+
+//Progress Bar Styling
+.progressBar {
+  position: fixed;
+  top: 130px;
+  z-index: 100;
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+    li {
+      display: block;
+      width: 10px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover {
+        width: 25px!important;
+      }
+    }
+  }
+}
+li.pLong {
+  height: 80px;
+}
+li.pMed {
+  height: 50px;
+}
+#pb1 {
+  background: $primaryColour;
+}
+#pb2 {
+  background: #DC3E27;
+}
+#pb3 {
+  background: #CCDB29;
+}
+#pb4 {
+  background: #6B3B48;
+}
+#pb5 {
+  background: #316B7B;
+}
+#pb6 {
+  background: #F1BF3E;
+}
+#pb7 {
+  background: #F59686;
+}
+
+
+
+
+
+.overflow {
+  overflow: hidden;
+}
+
+.visible {
+  overflow: visible;
+}
+
+.sceneContain {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  font-size: 18px;
+}
+
+.tagline {
+  font-size: 36px!important;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  position: absolute;
+  top: -320px;
+  color: $medFont;
+  span {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+// The main core circle
+#centreBib {
+  position: relative;
+  width: 240px;
+  margin: 0 auto;
+}
+
+#bibCore,
+#bibCoreF,
+#bibCoreL,
+#bibCoreC,
+#bibCoreS,
+#bibCoreS2 {
+  border-radius: 50%;
+  height: 240px;
+  width: 240px;
+  position: absolute;
+  margin: 0 auto;
+  border: 14px solid $primaryColour;
+  background: #fff;
+  z-index: 210;
+}
+
+#bibCore,
+#bibCoreC,
+#bibCoreS,
+#bibCoreS2 {
+  top: -30px;
+  left: 0;
+  right: 0;
+}
+
+
+#bibCore {
+  top: 20px;
+}
+
+#bibCoreF,
+#bibCoreL,
+#bibCoreC,
+#bibCoreS,
+#bibCoreS2,
+#patronTag,
+#storyTag3b
+ {
+  display: none;
+}
+
+.growCore {
+  min-height: 280px;
+  min-width: 280px;
+  left: -20px;
+}
+
+#bibPulse {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background: $primaryColour;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  margin: 0 auto;
+}
+
+.hideMe {
+  display: none;
+}
+
+.showMe {
+  display: block;
+}
+
+#storyText2,
+#storyText2R {
+  width: 100%;
+  margin: auto;
+  margin-top: 55px;
+  text-align: center;
+  opacity: 0;
+  line-height: 25px;
+  color: #3F4344;
+  img {
+    width: 85%;
+    margin-top: 5px;
+  }
+}
+
+#storyText3 {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  margin: 0 auto;
+  left: 0;
+  text-align: center;
+  .image-overlay {
+    display: none!important;
+  }
+  &:hover #bibCore {
+    border-color: #409082;
+  }
+  a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  left: 0;
+  text-align: center;
+  z-index: 207;
+    // border: 5px solid #000;
+  }
+}
+
+#bibLove {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -75px;
+  margin: auto;
+}
+
+#centerP {
+  height: 240px;
+  width: 240px;
+  border: 14px solid red;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.coreText {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  color: #51B2A1;
+  font-size: 60px;
+  line-height: 42px;
+  font-weight: 900;
+  margin: 0 auto;
+  width: 130px;
+  span {
+    font-size: 20px;
+    line-height: 20px;
+    color: #A4A7A6;
+    font-weight: 400;
+  }
+}
+
+#startText {
+    width: 150px;
+}
+
+// ------ Cabinet Drawer Pieces -------
+
+#bibTitle {
+  top: -200px;
+  color: $lightFont!important;
+  font-weight: 300!important;
+  span {
+    color: $primaryColour;
+    font-weight: 600;
+    font-size: 36px;
+  }
+}
+
+#introText {
+  top: -220px;
+}
+
+#scrollText {
+  position: relative;
+  img {
+    position: absolute;
+    top: 295px;
+    left: 130%;
+    margin-left: -8px;
+  }
+}
+
+#drawerContainer {
+  margin: 0 auto;
+  height: 150px;
+  position: relative;
+}
+.drawerContainer2 {
+  position: relative;
+  width: 620px;
+  margin: 0 auto;
+}
+
+$drOffset: 120px;
+
+#drBack {
+  position: absolute;
+  top: 5px;
+  left: 208px+$drOffset;
+}
+
+#drBottom {
+  position: absolute;
+  top: 56px;
+  left: 58px+$drOffset;
+}
+
+#drLeft {
+  position: absolute;
+  top: 9px;
+  left: 42px+$drOffset;
+}
+
+#drRight {
+  position: absolute;
+  top: 11px;
+  left: 182px+$drOffset;
+  z-index: 66;
+}
+
+#drFront {
+  position: absolute;
+  top: 0;
+  left: 0+$drOffset;
+  z-index: 68;
+}
+
+#drCard8 {
+  position: absolute;
+  top: -29px;
+  left: 228px+$drOffset;
+  z-index: 50;
+}
+
+#drCard7 {
+  position: absolute;
+  top: -23px;
+  left: 210px+$drOffset;
+  z-index: 52;
+}
+
+#drCard6 {
+  position: absolute;
+  top: -17px;
+  left: 192px+$drOffset;
+  z-index: 54;
+}
+
+#drCard5 {
+  position: absolute;
+  top: -11px;
+  left: 174px+$drOffset;
+  z-index: 56;
+}
+
+#drCard4 {
+  position: absolute;
+  top: -5px;
+  left: 156px+$drOffset;
+  z-index: 58;
+}
+
+#drCard3 {
+  position: absolute;
+  top: 1px;
+  left: 138px+$drOffset;
+  z-index: 60;
+}
+
+#drCard2 {
+  position: absolute;
+  top: 7px;
+  left: 120px+$drOffset;
+  z-index: 62;
+}
+
+#drCard1 {
+  position: absolute;
+  top: 13px;
+  left: 102px+$drOffset;
+  z-index: 64;
+}
+
+//Biblio Features
+
+.parallaxBack {
+  background: url(images/brilliant-background.png) repeat;
+  display: block;
+  position: absolute;
+  width: 1000%;
+  left: -500%;
+  margin: 0 auto;
+  height: 700px;
+}
+
+.bibFeature {
+  width: 350px;
+  position: absolute;
+  img {
+    float: left;
+  }
+  h3 {
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+    color: $lightFont;
+    font-weight: 300;
+  }
+  p {
+    color: $darkFont;
+    margin: 0;
+    line-height: 22px;
+  }
+}
+
+.featDesc {
+  float: left;
+  margin-left: 12px;
+  width: 75%;
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+#bibFSearch,
+#bibFExplore {
+  top: -90px;
+  left: 0;
+}
+#bibFSearch,
+#bibFBorrow {
+  left: 0;
+}
+#bibFExplore,
+#bibFDoMore {
+  left: 69%;
+  width: 400px;
+}
+#bibFBorrow,
+#bibFDoMore {
+  top: 130px;
+}
+
+// Biblio Logo Section
+#bibPatron {
+  z-index: 212;
+}
+
+#dataTrnf {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 164px;
+}
+
+.dataSt {
+  float: left;
+  &:nth-child(2) {
+    float: right;
+  }
+}
+
+.dataCirc {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background: #D6DE26;
+  border-radius: 50%;
+}
+
+#iconServer {
+  text-align: center;
+  position: absolute;
+  top: 215px;
+  left: 0;
+  right: 0;
+  width: 90px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+  }
+}
+
+
+#patronLogos {
+  position: absolute;
+  top: 201px;
+  width: 100%;
+}
+
+.patronLogosL,
+.patronLogosR {
+  width: 42%;
+  .logo1 {
+    padding-right: 15px;
+  }
+}
+.patronLogosL {
+  float: left;
+}
+.patronLogosR {
+  float: right;
+}
+
+.logo1 {
+  width: 33.33%;
+  float: left;
+  img {
+    max-width: 100%;
+  }
+}
+
+.logo2 {
+  width: 170px;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+}
+
+
+#patronLogo1 {
+  top: -140px;
+  left: 60%;
+  z-index: 210;
+}
+
+#patronLogo2 {
+  top: -90px;
+  left: 19%;
+  z-index: 211;
+}
+
+#patronLogo3 {
+  top: 75px;
+  left: 68%;
+  z-index: 212;
+}
+
+//Library Section
+#bibLibrary {
+  section {
+    width: 36%;
+  }
+}
+
+#librarian,
+#librarianR {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 17%;
+  width: 110px;
+}
+
+#librarianR {
+  top: 35%;
+}
+
+#iconEvent,
+#iconEventR {
+  position: absolute;
+  top: 59%;
+  left: 73%;
+  width: 40px;
+}
+
+#iconQuestion,
+#iconQuestionR {
+  position: absolute;
+  top: 11%;
+  left: 15%;
+  width: 73px;
+}
+
+#iconComment,
+#iconCommentR {
+  position: absolute;
+  left: 69%;
+  top: 26%;
+  width: 65px;
+}
+
+#iconList,
+#iconListR {
+  position: absolute;
+  top: 44%;
+  left: 9%;
+  width: 50px;
+}
+
+#iconComp {
+  position: absolute;
+  top: 154px;
+  left: 42%;
+  width: 140px;
+}
+
+#libraryText1,
+#libraryText2 {
+  position: absolute;
+  top: -40px;
+  p {
+    font-size: 20px;
+  }
+}
+#libraryText1 {
+  left: -6%;
+}
+#libraryText2 {
+  left: 73%;
+}
+
+//Connect section
+.connectStat {
+  position: absolute;
+  width: 370px;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  p {
+    font-size: 24px;
+    span {
+      font-weight: 600;
+      font-size: 28px;
+    }
+  }
+}
+
+.cs1 {
+  span {
+    color: #DC3E27;
+  }
+}
+
+.cs2 {
+  span {
+    color: #F1BF3E;
+  }
+}
+
+.cs3 {
+  span {
+    color: $primaryColour;
+  }
+}
+
+#connectGrp1,
+#connectGrp2 {
+  height: 300px;
+  width: 350px;
+  position: absolute;
+  top: -120px;
+  // opacity: 0;
+}
+
+#connectGrp1 {
+  left: -8%;
+}
+
+#connectGrp2 {
+  left: 70%;
+}
+
+.lib-icon {
+  width: 90px;
+}
+.libr-icon {
+  width: 60px;
+}
+.usr-icon {
+  width: 65px;
+}
+
+.smUser {
+  width: 37px;
+}
+.cLib1 {
+  position: absolute;
+  top: 2%;
+  left: 16%;
+}
+.cLib2 {
+  position: absolute;
+  top: -2%;
+  left: 70%;
+}
+.cLib3 {
+  position: absolute;
+  top: 66%;
+  left: 29%;
+}
+.cLib4 {
+  position: absolute;
+  top: 4%;
+  left: -8%;
+}
+.cLib5 {
+  position: absolute;
+  top: -2%;
+  left: 63%;
+}
+
+.cLibr1 {
+  position: absolute;
+  top: -10%;
+  left: 44%;
+}
+.cLibr2 {
+  position: absolute;
+  top: 56%;
+  left: 7%;
+}
+.cLibr3 {
+  position: absolute;
+  top: -1%;
+  left: 100%;
+}
+.cLibr4 {
+  position: absolute;
+  top: 12%;
+  left: 24%;
+}
+.cLibr5 {
+  position: absolute;
+  top: 65%;
+  left: 7%;
+}
+.cLibr6 {
+  position: absolute;
+  top: 14%;
+  left: 92%;
+}
+.cUser1 {
+  position: absolute;
+  top: -19%;
+  left: 0;
+}
+.cUser2 {
+  position: absolute;
+  top: 28%;
+  left: -2%;
+}
+.cUser3 {
+  position: absolute;
+  top: 37%;
+  left: 54%;
+}
+.cUser4 {
+  position: absolute;
+  top: 77%;
+  left: 63%;
+}
+.cUser5 {
+  position: absolute;
+  top: 48%;
+  left: 86%;
+}
+.cUser6 {
+  position: absolute;
+  top: -12%;
+  left: -26%;
+}
+.cUser7 {
+  position: absolute;
+  top: 44%;
+  left: -13%;
+}
+.cUser8 {
+  position: absolute;
+  top: -15%;
+  left: 40%;
+}
+.cUser9 {
+  position: absolute;
+  top: 40%;
+  left: 53%;
+}
+.cUser10 {
+  position: absolute;
+  top: 81%;
+  left: 67%;
+}
+
+//Story Section
+#bibStory1 {
+  z-index: 220;
+}
+
+#perfink {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -140px;
+  width: 250px;
+  img {
+    width: 100%;
+  }
+}
+
+#storyTag1,
+#storyTag2,
+#storyTag3 {
+  width: 500px;
+  left: 0;
+  right: 0;
+  margin: 28px auto 0 auto;
+}
+#storyTag3 {
+  top: 140px;
+  width: 340px;
+}
+
+#storyTag3 {
+  width: 350px;
+}
+
+// Catalog Section
+#bibCatalog {
+  text-align: center;
+  z-index: 5;
+  a {
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+.cBubble {
+  text-align: center;
+  position: absolute;
+  border-radius: 50%;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+  span {
+    display: block;
+  }
+  h4, h2 {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    text-align: justify;
+  }
+  h2 {
+    padding-top: 0;
+    span {
+      font-size: 12px;
+    }
+  }
+  h4 {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 300;
+  }
+  a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+span.cCtr, .cCtr {
+  display: inline-block;
+  vertical-align: middle;
+  span {
+    display: inline;
+  }
+}
+
+.cLrg {
+  height: 191px;
+  width: 191px;
+  h2 {
+    font-size: 32px!important;
+    line-height: 28px;
+  }
+}
+
+.cMed {
+  height: 140px;
+  width: 140px;
+  h2 {
+    font-size: 20px!important;
+  }
+  h4 {
+    line-height: 10px;
+  }
+}
+
+.cSm {
+  height: 80px;
+  width: 80px;
+  h2 {
+    font-size: 20px;
+  }
+  h4 {
+    line-height: 8px;
+  }
+}
+
+#bibCCMS {
+  background: #DC3E27;
+  top: 20px;
+  left: 23%;
+  z-index: 180;
+  &:hover {
+    background: #B3301D;
+  }
+}
+
+#bibCDigital {
+  background: #316B7B;
+  top: -175px;
+  left: 57%;
+  z-index: 178;
+  &:hover {
+    background: #224B57;
+  }
+}
+
+#bibCMobile {
+  background: #8F6583;
+  top: 84px;
+  left: 56.5%;
+  z-index: 186;
+  &:hover {
+    background: #715068;
+  }
+}
+
+#bibCEvents {
+  background: #F59686;
+  top: 115px;
+  left: 40%;
+  z-index: 184;
+  &:hover {
+    background: #F16D57;
+  }
+}
+
+#bibCSummer {
+  background: #F1BF3E;
+  top: -135px;
+  left: 28%;
+  z-index: 190;
+  &:hover {
+    background: #EBAE11;
+  }
+  h2 {
+    line-height: 19px;
+  }
+}
+
+#bibCSuggest {
+  background: #CCDB29;
+  top: -178px;
+  left: 44%;
+  z-index: 188;
+  &:hover {
+    background: #A6B31E;
+  }
+  h2 {
+    font-size: 16px!important;
+    line-height: 17px;
+  }
+}
+
+#bibCReader {
+  background: #6B3B48;
+  top: -64px;
+  left: 73%;
+  z-index: 176;
+  &:hover {
+    background: #4A2932;
+  }
+}
+
+#bibCBuy {
+  background: #81909B;
+  top: -17px;
+  left: 62%;
+  z-index: 182;
+  &:hover {
+    background: #677782;
+  }
+}
+
+//adjustments for catalog product page
+.productPage #bibCore:hover {
+  border-color: #409082;
+}
+
+.imgCont {
+  img:nth-child(2) {
+    display: none;
+    top: 0;
+    left: 0;
+  }
+  &:hover img:nth-child(1) {
+    opacity: 0;
+  }
+  &:hover img:nth-child(2) {
+    display: inline;
+  }
+}
+
+.products-page {
+  .sceneContain {
+    height: 90px;
+  }
+  .content {
+    padding-top: 20px;
+  }
+}
+
+.productPage {
+  margin-top: 260px;
+  margin-bottom: 100px;
+  #bibCore {
+    top: -129px;
+  }
+  #bibCCMS {
+    top: -30px;
+  }
+  #bibCDigital {
+    top: -225px;
+  }
+  #bibCMobile {
+    top: 34px;
+  }
+  #bibCEvents {
+    top: 65px;
+  }
+  #bibCSummer {
+    top: -185px;
+  }
+  #bibCSuggest {
+    top: -228px;
+  }
+  #bibCReader {
+    top: -114px;
+  }
+  #bibCBuy {
+    top: -58px;
+  }
+}
+
+
+//Patron Love Section
+.feedback {
+  width: 290px;
+  border-left: none;
+  padding-left: 0;
+  position: absolute;
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 10px 0;
+    color: $darkFont;
+  }
+  span {
+    color: $primaryColour;
+  }
+  .oQuote,
+  .cQuote {
+    font-family: serif;
+    font-size: 60px;
+  }
+  .oQuote {
+    position: absolute;
+    top: 12px;
+    left: -32px;
+  }
+}
+
+.cQuote {
+  position: relative;
+  display: inline-block;
+  line-height: 4px;
+  top: 21px;
+  vertical-align: middle;
+  left: 4px;
+}
+
+
+#feedback1 {
+  top: -230px;
+  left: 10%;
+}
+
+#feedback2 {
+  top: -230px;
+  left: 64%;
+}
+
+#feedback3 {
+  top: -45px;
+  left: -4%;
+}
+
+#feedback4 {
+  top: -45px;
+  left: 77%;
+}
+
+#feedback5 {
+  top: 150px;
+  left: 5%;
+}
+
+#feedback6 {
+  top: 150px;
+  left: 68%;
+}
+
+.fp-button {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300!important;
+  margin: 0 auto 120px auto;
+  color: #fff;
+  width: 250px;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.pl-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 190px;
+}
+
+a.pl-button,
+a.libButton {
+  margin-top: 100px;
+  color: $primaryColour;
+  border: 1px solid $primaryColour;
+}
+
+#libLogos {
+  position: relative;
+  height: 100px;
+  text-align: center;
+  margin: 425px 0 0 0;
+}
+
+.libLogos {
+  width: 80%;
+  margin: 0 auto;
+  display: none;
+  img {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+  }
+}
+
+#requestBtn {
+  position: fixed;
+  z-index: 1000;
+  max-width: none;
+  background: #fff;
+  top: 11px;
+  right: 10px;
+  width: 135px;
+  padding: 7px;
+  border-color: #AAA;
+  color: #AAA;
+  font-size: 14px;
+}
+
+
+footer.fpFooter {
+  text-align: center;
+  height: 600px;
+  padding-top: 150px;
+  background: $primaryColour;
+  color: #fff;
+  img {
+    display: block;
+    max-width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 20px;
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  li {
+    margin-bottom: 10px;
+    width: 25%;
+    float: left;
+    text-align: center;
+  }
+  nav {
+    a {
+      color: #fff;
+      display: block;
+      height: 125px;
+      position: relative;
+      p {
+        text-align: bottom;
+        position: absolute;
+        top: 72%;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+//Spacers (temp)
+.spacer1 {
+  margin-bottom: 250px;
+}
+
+// Library Pages Styling
+#lib-title,
+#blog-title {
+  text-align: center;
+  margin: 25px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #CCC;
+}
+.page-template-library-page {
+  .template-page {
+    padding-top: 0;
+    padding-left: 30px;
+  }
+  .container .av-content-small.units {
+    width: 85%;
+  }
+  .content {
+    border-left: none;
+  }
+  #top #main .sidebar_left .sidebar {
+    border-right: none;
+  }
+  .sidebar {
+    height: 100%;
+    background: $primaryColour;
+    padding-top: 10px;
+    margin-top: 50px;
+    color: #fff;
+    margin-top: 0;
+    border-right: none;
+  }
+  .main_color .sidebar a {
+    color: #fff;
+    text-align: left;
+  }
+  #menu-library-nav {
+    li {
+      background: $primaryColour;
+      padding-top: 0;
+      padding-left: 10px;
+      box-shadow: none;
+      font-size: 14px;
+    }
+  }
+  .flex_column {
+    width: 24%;
+  }
+  .av_one_fourth {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+  }
+  .column-top-margin {
+    margin-top: 30px;
+  }
+  .liblogo-display {
+    box-shadow: 2px 2px 5px #D4D4D4;
+    width: 100%;
+    height: 125px;
+    padding: 8px;
+    .avia-image-container-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      img {
+        max-height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+    //same styling but with a tag after so logos can be linked out
+    .avia-image-container-inner a {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      img {
+        max-height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &:hover {
+        span.image-overlay {
+          display: none!important;
+        }
+      }
+    }
+  } 
+}
+
+// .template-page {
+//   padding-top: 0;
+//   padding-left: 30px;
+// }
+.container .av-content-small.units {
+  width: 85%;
+}
+.content {
+  border-left: none;
+}
+#top #main .sidebar_left .sidebar {
+  border-right: none;
+}
+.sidebar {
+  height: 100%;
+  background: $primaryColour;
+  padding-top: 10px;
+  margin-top: 50px;
+  color: #fff;
+  margin-top: 0;
+  border-right: none;
+}
+.main_color .sidebar a {
+  color: #fff;
+  text-align: left;
+}
+#menu-library-nav {
+  li {
+    background: $primaryColour;
+    padding-top: 0;
+    padding-left: 10px;
+    box-shadow: none;
+    font-size: 14px;
+  }
+}
+.flex_column {
+  width: 24%;
+}
+.av_one_fourth {
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+.column-top-margin {
+  margin-top: 30px;
+}
+
+// Blog page stylings
+.why-bib-txt {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#taxonomy_list_widget-2 {
+  h3.widgettitle {
+    color: #FFF;
+    text-transform: none;
+    text-align: left;
+    padding-left: 10px;
+    border-bottom: 1px solid #BCC3C2;
+    padding-bottom: 5px;
+  }
+}
+
+.sidebar_left .inner_sidebar {
+  margin-right: 0;
+}
+
+.tlw-list {
+  text-align: left;
+  padding-left: 10px;
+}
+
+//Tag Page Styling
+#taxonomy-tags {
+  background: $primaryColour;
+  color: #fff;
+  width: 15%;
+  float: left;
+  padding: 10px 0 50px 0;
+  h3, a, b {
+    color: #fff;
+  }
+  h3 {
+    border-bottom: 1px solid #BCC3C2;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    text-transform: none;
+  }
+  ul {
+    margin-left: 0;
+    padding: 0 10px 10px 10px;
+  }
+}
+
+#tag-page {
+  .template-page {
+    padding-left: 0;
+  }
+  .units.alpha {
+    clear: none;
+  }
+  .container .av-content-full.units {
+    float: right;
+    width: 82%;
+    margin-left: 3%;
+    padding-top: 0;
+  }
+}
+
+#top .fullsize .template-blog .post .entry-content-wrapper > * {
+max-width: 700px;
+}
+
+//Mail Chimp Stylings
+#mc4wp-form-1 {
+  margin-top: 50px;
+  width: 250px;
+  margin: 0 auto;
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+  }
+  input[type="submit"] {
+    display: block;
+    border-radius: 2px;
+    width: 100px;
+    margin: 0 auto;
+  }
+}
+
+// Blog page stylings
+.page-template-blog-page {
+  #taxonomy-tags {
+    width: 17%;
+  }
+  #tag-page .container .av-content-full.units {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 1090px) {
+  #libraryText1 {
+    left: -2%;
+  }
+  #libraryText2 {
+    left: 69%;
+  }
+
+  #connectGrp1 {
+    left: -2%;
+  }
+  #connectGrp2 {
+    left: 66%
+  }
+  #bibFSearch,
+  #bibFBorrow {
+    left: 2%;
+  }
+  #bibFExplore,
+  #bibFDoMore {
+    left: 64%;
+  }
+  #bibFDoMore {
+    left: 61%;
+  }
+  #feedback3 {
+    left: 0%;
+  }
+  #feedback4 {
+    left: 70%;
+  }
+}
+
+@media all and (max-width: 989px) {
+  .page-template-library-page {
+    .flex_column {
+      width: 32.33%!important;
+      margin-left: 0.5%!important;
+      clear: initial!important;
+      margin-top: 0!important;
+    }
+  } 
+}
+
+//Twitter Widget Stylings
+iframe#twitter-widget-0 {
+  width: 100%!important;
+  margin: 0 auto;
+  display: block;
+}
+
+.twtr-hd {
+  display: none;
+}
+
+
+
+
+@import "responsive";
+@import "responsive2";
+
+
+
+.fpWrapper {
+  // padding-top: 150px;
 }

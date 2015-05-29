@@ -1,3 +1,2227 @@
+/*
+Theme Name: Enfold Child
+Description: A <a href='http://codex.wordpress.org/Child_Themes'>Child Theme</a> for the Enfold Wordpress Theme. If you plan to do a lot of file modifications we recommend to use this Theme instead of the original Theme. Updating will be much easier then.
+Version: 1.0
+Author: Kriesi
+Author URI: http://www.kriesi.at
+Template: enfold
+*/
+/*Add your own styles here:*/
+/* General Custom CSS */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Amatic+SC:700);
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
 h1 {
-  color: red;
-  margin: 21px; }
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+.modern-quote .av-special-heading-tag {
+  font-weight: 800; }
+
+h2 {
+  padding-top: 10px;
+  font-weight: 600 !important; }
+
+p {
+  font-size: 16px; }
+
+.post-entry li {
+  font-size: 16px; }
+
+body {
+  font-family: "Open Sans", sans-serif; }
+
+.container {
+  max-width: 1024px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 50px;
+  clear: both; }
+
+.template-page .entry-content-wrapper h1, .template-page .entry-content-wrapper h2, .template-page .entry-content-wrapper h3, .template-page .entry-content-wrapper h4, .template-page .entry-content-wrapper h5 {
+  text-transform: none; }
+
+.main_color {
+  border: none; }
+  .main_color h2 {
+    color: #3f4344; }
+
+.main_color h3 {
+  font-size: 16px;
+  color: #50b2a0; }
+
+.modern-quote h3.av-special-heading-tag {
+  font-weight: 600; }
+
+.html_stretched #wrap_all,
+html, #scroll-top-link {
+  background-color: #fff; }
+
+#resumator-logo {
+  display: none; }
+
+.avia-menu-fx, .current-menu-item > a > .avia-menu-fx, li:hover .current_page_item > a > .avia-menu-fx {
+  display: none; }
+
+.av-main-nav li.hide-menu {
+  display: none; }
+
+header {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 50px; }
+  header .logo {
+    display: inline-block;
+    float: left; }
+  header ul {
+    float: right;
+    list-style: none; }
+    header ul li {
+      float: left;
+      margin-left: 20px; }
+      header ul li a {
+        text-decoration: none;
+        color: black; }
+
+@media all and (min-width: 900px) {
+  .home #advanced_menu_toggle {
+    position: fixed;
+    top: 20px;
+    left: 10px; }
+  .home #mobile-advanced {
+    width: 350px;
+    left: -350px; }
+  .home #advanced_menu_hide {
+    left: 23px; } }
+
+.avia_desktop #advanced_menu_toggle {
+  color: #51B2A1; }
+  .avia_desktop #advanced_menu_toggle:hover {
+    background-color: #51B2A1;
+    border-color: #51B2A1; }
+
+.avia_desktop #advanced_menu_hide:hover {
+  background-color: #51B2A1;
+  border-color: #51B2A1; }
+
+#mobile-advanced,
+#advanced_menu_hide {
+  display: block; }
+
+.home .header_color .header_bg {
+  background-color: rgba(255, 255, 255, 0); }
+
+.avia_transform3d .show_mobile_menu #mobile-advanced {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
+
+#mobile-advanced a:before {
+  display: none; }
+
+.logo {
+  padding-top: 9px !important; }
+
+ul.sub-menu {
+  border-top: none !important; }
+
+#header_main {
+  border-bottom: none; }
+
+.avia-menu-text {
+  font-weight: 300;
+  font-size: 14px; }
+
+#fancybox-frame {
+  border: 10px solid black; }
+
+#menu-productnav {
+  margin: 0;
+  margin: 40px 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0; }
+  #menu-productnav li {
+    display: inline; }
+    #menu-productnav li a {
+      color: #fff;
+      font-size: 14px;
+      padding: 2px 18px;
+      position: relative; }
+      #menu-productnav li a:hover {
+        text-decoration: none; }
+  #menu-productnav .pCore {
+    background: #51B2A1; }
+  #menu-productnav .menu-core a {
+    background: #51B2A1; }
+    #menu-productnav .menu-core a:after {
+      border-top-color: #51B2A1; }
+  #menu-productnav .menu-mobile a {
+    background: #8F6583; }
+    #menu-productnav .menu-mobile a:after {
+      border-top-color: #8F6583; }
+  #menu-productnav .menu-summer a {
+    background: #F1BF3E; }
+    #menu-productnav .menu-summer a:after {
+      border-top-color: #F1BF3E; }
+  #menu-productnav .menu-cms a {
+    background: #DC3E27; }
+    #menu-productnav .menu-cms a:after {
+      border-top-color: #DC3E27; }
+  #menu-productnav .menu-digital a {
+    background: #316B7B; }
+    #menu-productnav .menu-digital a:after {
+      border-top-color: #316B7B; }
+  #menu-productnav .menu-events a {
+    background: #F59686; }
+    #menu-productnav .menu-events a:after {
+      border-top-color: #F59686; }
+  #menu-productnav .menu-reader a {
+    background: #6B3B48; }
+    #menu-productnav .menu-reader a:after {
+      border-top-color: #6B3B48; }
+  #menu-productnav .menu-buy a {
+    background: #81909B; }
+    #menu-productnav .menu-buy a:after {
+      border-top-color: #81909B; }
+  #menu-productnav .menu-suggest a {
+    background: #CCDB29; }
+    #menu-productnav .menu-suggest a:after {
+      border-top-color: #CCDB29; }
+  #menu-productnav .current-menu-item a:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent; }
+
+.page-template-library-page .current-page-ancestor a span {
+  color: #333; }
+
+.fpWrapper {
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .fpWrapper h1, .fpWrapper h2, .fpWrapper h3, .fpWrapper h4, .fpWrapper h5 {
+    margin: 28px 0;
+    font-family: "Open Sans", sans-serif; }
+  .fpWrapper p {
+    margin: 28px 0; }
+
+.progressBar {
+  position: fixed;
+  top: 130px;
+  z-index: 100; }
+  .progressBar ul {
+    margin-left: 0;
+    padding-left: 0; }
+    .progressBar ul li {
+      display: block;
+      width: 10px; }
+      .progressBar ul li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+      .progressBar ul li:hover {
+        width: 25px !important; }
+
+li.pLong {
+  height: 80px; }
+
+li.pMed {
+  height: 50px; }
+
+#pb1 {
+  background: #51B2A1; }
+
+#pb2 {
+  background: #DC3E27; }
+
+#pb3 {
+  background: #CCDB29; }
+
+#pb4 {
+  background: #6B3B48; }
+
+#pb5 {
+  background: #316B7B; }
+
+#pb6 {
+  background: #F1BF3E; }
+
+#pb7 {
+  background: #F59686; }
+
+.overflow {
+  overflow: hidden; }
+
+.visible {
+  overflow: visible; }
+
+.sceneContain {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  font-size: 18px; }
+
+.tagline {
+  font-size: 36px !important;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  position: absolute;
+  top: -320px;
+  color: #3F4344; }
+  .tagline span {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 30px; }
+
+#centreBib {
+  position: relative;
+  width: 240px;
+  margin: 0 auto; }
+
+#bibCore,
+#bibCoreF,
+#bibCoreL,
+#bibCoreC,
+#bibCoreS,
+#bibCoreS2 {
+  border-radius: 50%;
+  height: 240px;
+  width: 240px;
+  position: absolute;
+  margin: 0 auto;
+  border: 14px solid #51B2A1;
+  background: #fff;
+  z-index: 210; }
+
+#bibCore,
+#bibCoreC,
+#bibCoreS,
+#bibCoreS2 {
+  top: -30px;
+  left: 0;
+  right: 0; }
+
+#bibCore {
+  top: 20px; }
+
+#bibCoreF,
+#bibCoreL,
+#bibCoreC,
+#bibCoreS,
+#bibCoreS2,
+#patronTag,
+#storyTag3b {
+  display: none; }
+
+.growCore {
+  min-height: 280px;
+  min-width: 280px;
+  left: -20px; }
+
+#bibPulse {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background: #51B2A1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  margin: 0 auto; }
+
+.hideMe {
+  display: none; }
+
+.showMe {
+  display: block; }
+
+#storyText2,
+#storyText2R {
+  width: 100%;
+  margin: auto;
+  margin-top: 55px;
+  text-align: center;
+  opacity: 0;
+  line-height: 25px;
+  color: #3F4344; }
+  #storyText2 img,
+  #storyText2R img {
+    width: 85%;
+    margin-top: 5px; }
+
+#storyText3 {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  margin: 0 auto;
+  left: 0;
+  text-align: center; }
+  #storyText3 .image-overlay {
+    display: none !important; }
+  #storyText3:hover #bibCore {
+    border-color: #409082; }
+  #storyText3 a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    left: 0;
+    text-align: center;
+    z-index: 207; }
+
+#bibLove {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -75px;
+  margin: auto; }
+
+#centerP {
+  height: 240px;
+  width: 240px;
+  border: 14px solid red;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+
+.coreText {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  color: #51B2A1;
+  font-size: 60px;
+  line-height: 42px;
+  font-weight: 900;
+  margin: 0 auto;
+  width: 130px; }
+  .coreText span {
+    font-size: 20px;
+    line-height: 20px;
+    color: #A4A7A6;
+    font-weight: 400; }
+
+#startText {
+  width: 150px; }
+
+#bibTitle {
+  top: -200px;
+  color: #8D8D8E !important;
+  font-weight: 300 !important; }
+  #bibTitle span {
+    color: #51B2A1;
+    font-weight: 600;
+    font-size: 36px; }
+
+#introText {
+  top: -220px; }
+
+#scrollText {
+  position: relative; }
+  #scrollText img {
+    position: absolute;
+    top: 295px;
+    left: 130%;
+    margin-left: -8px; }
+
+#drawerContainer {
+  margin: 0 auto;
+  height: 150px;
+  position: relative; }
+
+.drawerContainer2 {
+  position: relative;
+  width: 620px;
+  margin: 0 auto; }
+
+#drBack {
+  position: absolute;
+  top: 5px;
+  left: 328px; }
+
+#drBottom {
+  position: absolute;
+  top: 56px;
+  left: 178px; }
+
+#drLeft {
+  position: absolute;
+  top: 9px;
+  left: 162px; }
+
+#drRight {
+  position: absolute;
+  top: 11px;
+  left: 302px;
+  z-index: 66; }
+
+#drFront {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  z-index: 68; }
+
+#drCard8 {
+  position: absolute;
+  top: -29px;
+  left: 348px;
+  z-index: 50; }
+
+#drCard7 {
+  position: absolute;
+  top: -23px;
+  left: 330px;
+  z-index: 52; }
+
+#drCard6 {
+  position: absolute;
+  top: -17px;
+  left: 312px;
+  z-index: 54; }
+
+#drCard5 {
+  position: absolute;
+  top: -11px;
+  left: 294px;
+  z-index: 56; }
+
+#drCard4 {
+  position: absolute;
+  top: -5px;
+  left: 276px;
+  z-index: 58; }
+
+#drCard3 {
+  position: absolute;
+  top: 1px;
+  left: 258px;
+  z-index: 60; }
+
+#drCard2 {
+  position: absolute;
+  top: 7px;
+  left: 240px;
+  z-index: 62; }
+
+#drCard1 {
+  position: absolute;
+  top: 13px;
+  left: 222px;
+  z-index: 64; }
+
+.parallaxBack {
+  background: url(images/brilliant-background.png) repeat;
+  display: block;
+  position: absolute;
+  width: 1000%;
+  left: -500%;
+  margin: 0 auto;
+  height: 700px; }
+
+.bibFeature {
+  width: 350px;
+  position: absolute; }
+  .bibFeature img {
+    float: left; }
+  .bibFeature h3 {
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+    color: #8D8D8E;
+    font-weight: 300; }
+  .bibFeature p {
+    color: #000;
+    margin: 0;
+    line-height: 22px; }
+
+.featDesc {
+  float: left;
+  margin-left: 12px;
+  width: 75%; }
+  .featDesc h3 {
+    font-size: 20px; }
+  .featDesc p {
+    font-size: 18px; }
+
+#bibFSearch,
+#bibFExplore {
+  top: -90px;
+  left: 0; }
+
+#bibFSearch,
+#bibFBorrow {
+  left: 0; }
+
+#bibFExplore,
+#bibFDoMore {
+  left: 69%;
+  width: 400px; }
+
+#bibFBorrow,
+#bibFDoMore {
+  top: 130px; }
+
+#bibPatron {
+  z-index: 212; }
+
+#dataTrnf {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 164px; }
+
+.dataSt {
+  float: left; }
+  .dataSt:nth-child(2) {
+    float: right; }
+
+.dataCirc {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background: #D6DE26;
+  border-radius: 50%; }
+
+#iconServer {
+  text-align: center;
+  position: absolute;
+  top: 215px;
+  left: 0;
+  right: 0;
+  width: 90px;
+  margin: 0 auto; }
+  #iconServer img {
+    width: 100%; }
+
+#patronLogos {
+  position: absolute;
+  top: 201px;
+  width: 100%; }
+
+.patronLogosL,
+.patronLogosR {
+  width: 42%; }
+  .patronLogosL .logo1,
+  .patronLogosR .logo1 {
+    padding-right: 15px; }
+
+.patronLogosL {
+  float: left; }
+
+.patronLogosR {
+  float: right; }
+
+.logo1 {
+  width: 33.33%;
+  float: left; }
+  .logo1 img {
+    max-width: 100%; }
+
+.logo2 {
+  width: 170px;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute; }
+
+#patronLogo1 {
+  top: -140px;
+  left: 60%;
+  z-index: 210; }
+
+#patronLogo2 {
+  top: -90px;
+  left: 19%;
+  z-index: 211; }
+
+#patronLogo3 {
+  top: 75px;
+  left: 68%;
+  z-index: 212; }
+
+#bibLibrary section {
+  width: 36%; }
+
+#librarian,
+#librarianR {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 17%;
+  width: 110px; }
+
+#librarianR {
+  top: 35%; }
+
+#iconEvent,
+#iconEventR {
+  position: absolute;
+  top: 59%;
+  left: 73%;
+  width: 40px; }
+
+#iconQuestion,
+#iconQuestionR {
+  position: absolute;
+  top: 11%;
+  left: 15%;
+  width: 73px; }
+
+#iconComment,
+#iconCommentR {
+  position: absolute;
+  left: 69%;
+  top: 26%;
+  width: 65px; }
+
+#iconList,
+#iconListR {
+  position: absolute;
+  top: 44%;
+  left: 9%;
+  width: 50px; }
+
+#iconComp {
+  position: absolute;
+  top: 154px;
+  left: 42%;
+  width: 140px; }
+
+#libraryText1,
+#libraryText2 {
+  position: absolute;
+  top: -40px; }
+  #libraryText1 p,
+  #libraryText2 p {
+    font-size: 20px; }
+
+#libraryText1 {
+  left: -6%; }
+
+#libraryText2 {
+  left: 73%; }
+
+.connectStat {
+  position: absolute;
+  width: 370px;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center; }
+  .connectStat p {
+    font-size: 24px; }
+    .connectStat p span {
+      font-weight: 600;
+      font-size: 28px; }
+
+.cs1 span {
+  color: #DC3E27; }
+
+.cs2 span {
+  color: #F1BF3E; }
+
+.cs3 span {
+  color: #51B2A1; }
+
+#connectGrp1,
+#connectGrp2 {
+  height: 300px;
+  width: 350px;
+  position: absolute;
+  top: -120px; }
+
+#connectGrp1 {
+  left: -8%; }
+
+#connectGrp2 {
+  left: 70%; }
+
+.lib-icon {
+  width: 90px; }
+
+.libr-icon {
+  width: 60px; }
+
+.usr-icon {
+  width: 65px; }
+
+.smUser {
+  width: 37px; }
+
+.cLib1 {
+  position: absolute;
+  top: 2%;
+  left: 16%; }
+
+.cLib2 {
+  position: absolute;
+  top: -2%;
+  left: 70%; }
+
+.cLib3 {
+  position: absolute;
+  top: 66%;
+  left: 29%; }
+
+.cLib4 {
+  position: absolute;
+  top: 4%;
+  left: -8%; }
+
+.cLib5 {
+  position: absolute;
+  top: -2%;
+  left: 63%; }
+
+.cLibr1 {
+  position: absolute;
+  top: -10%;
+  left: 44%; }
+
+.cLibr2 {
+  position: absolute;
+  top: 56%;
+  left: 7%; }
+
+.cLibr3 {
+  position: absolute;
+  top: -1%;
+  left: 100%; }
+
+.cLibr4 {
+  position: absolute;
+  top: 12%;
+  left: 24%; }
+
+.cLibr5 {
+  position: absolute;
+  top: 65%;
+  left: 7%; }
+
+.cLibr6 {
+  position: absolute;
+  top: 14%;
+  left: 92%; }
+
+.cUser1 {
+  position: absolute;
+  top: -19%;
+  left: 0; }
+
+.cUser2 {
+  position: absolute;
+  top: 28%;
+  left: -2%; }
+
+.cUser3 {
+  position: absolute;
+  top: 37%;
+  left: 54%; }
+
+.cUser4 {
+  position: absolute;
+  top: 77%;
+  left: 63%; }
+
+.cUser5 {
+  position: absolute;
+  top: 48%;
+  left: 86%; }
+
+.cUser6 {
+  position: absolute;
+  top: -12%;
+  left: -26%; }
+
+.cUser7 {
+  position: absolute;
+  top: 44%;
+  left: -13%; }
+
+.cUser8 {
+  position: absolute;
+  top: -15%;
+  left: 40%; }
+
+.cUser9 {
+  position: absolute;
+  top: 40%;
+  left: 53%; }
+
+.cUser10 {
+  position: absolute;
+  top: 81%;
+  left: 67%; }
+
+#bibStory1 {
+  z-index: 220; }
+
+#perfink {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -140px;
+  width: 250px; }
+  #perfink img {
+    width: 100%; }
+
+#storyTag1,
+#storyTag2,
+#storyTag3 {
+  width: 500px;
+  left: 0;
+  right: 0;
+  margin: 28px auto 0 auto; }
+
+#storyTag3 {
+  top: 140px;
+  width: 340px; }
+
+#storyTag3 {
+  width: 350px; }
+
+#bibCatalog {
+  text-align: center;
+  z-index: 5; }
+  #bibCatalog a {
+    display: block;
+    border-radius: 50%; }
+
+.cBubble {
+  text-align: center;
+  position: absolute;
+  border-radius: 50%; }
+  .cBubble:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; }
+  .cBubble span {
+    display: block; }
+  .cBubble h4, .cBubble h2 {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    text-align: justify; }
+  .cBubble h2 {
+    padding-top: 0; }
+    .cBubble h2 span {
+      font-size: 12px; }
+  .cBubble h4 {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 300; }
+  .cBubble a {
+    display: inline-block;
+    vertical-align: middle; }
+
+span.cCtr, .cCtr {
+  display: inline-block;
+  vertical-align: middle; }
+  span.cCtr span, .cCtr span {
+    display: inline; }
+
+.cLrg {
+  height: 191px;
+  width: 191px; }
+  .cLrg h2 {
+    font-size: 32px !important;
+    line-height: 28px; }
+
+.cMed {
+  height: 140px;
+  width: 140px; }
+  .cMed h2 {
+    font-size: 20px !important; }
+  .cMed h4 {
+    line-height: 10px; }
+
+.cSm {
+  height: 80px;
+  width: 80px; }
+  .cSm h2 {
+    font-size: 20px; }
+  .cSm h4 {
+    line-height: 8px; }
+
+#bibCCMS {
+  background: #DC3E27;
+  top: 20px;
+  left: 23%;
+  z-index: 180; }
+  #bibCCMS:hover {
+    background: #B3301D; }
+
+#bibCDigital {
+  background: #316B7B;
+  top: -175px;
+  left: 57%;
+  z-index: 178; }
+  #bibCDigital:hover {
+    background: #224B57; }
+
+#bibCMobile {
+  background: #8F6583;
+  top: 84px;
+  left: 56.5%;
+  z-index: 186; }
+  #bibCMobile:hover {
+    background: #715068; }
+
+#bibCEvents {
+  background: #F59686;
+  top: 115px;
+  left: 40%;
+  z-index: 184; }
+  #bibCEvents:hover {
+    background: #F16D57; }
+
+#bibCSummer {
+  background: #F1BF3E;
+  top: -135px;
+  left: 28%;
+  z-index: 190; }
+  #bibCSummer:hover {
+    background: #EBAE11; }
+  #bibCSummer h2 {
+    line-height: 19px; }
+
+#bibCSuggest {
+  background: #CCDB29;
+  top: -178px;
+  left: 44%;
+  z-index: 188; }
+  #bibCSuggest:hover {
+    background: #A6B31E; }
+  #bibCSuggest h2 {
+    font-size: 16px !important;
+    line-height: 17px; }
+
+#bibCReader {
+  background: #6B3B48;
+  top: -64px;
+  left: 73%;
+  z-index: 176; }
+  #bibCReader:hover {
+    background: #4A2932; }
+
+#bibCBuy {
+  background: #81909B;
+  top: -17px;
+  left: 62%;
+  z-index: 182; }
+  #bibCBuy:hover {
+    background: #677782; }
+
+.productPage #bibCore:hover {
+  border-color: #409082; }
+
+.imgCont img:nth-child(2) {
+  display: none;
+  top: 0;
+  left: 0; }
+
+.imgCont:hover img:nth-child(1) {
+  opacity: 0; }
+
+.imgCont:hover img:nth-child(2) {
+  display: inline; }
+
+.products-page .sceneContain {
+  height: 90px; }
+
+.products-page .content {
+  padding-top: 20px; }
+
+.productPage {
+  margin-top: 260px;
+  margin-bottom: 100px; }
+  .productPage #bibCore {
+    top: -129px; }
+  .productPage #bibCCMS {
+    top: -30px; }
+  .productPage #bibCDigital {
+    top: -225px; }
+  .productPage #bibCMobile {
+    top: 34px; }
+  .productPage #bibCEvents {
+    top: 65px; }
+  .productPage #bibCSummer {
+    top: -185px; }
+  .productPage #bibCSuggest {
+    top: -228px; }
+  .productPage #bibCReader {
+    top: -114px; }
+  .productPage #bibCBuy {
+    top: -58px; }
+
+.feedback {
+  width: 290px;
+  border-left: none;
+  padding-left: 0;
+  position: absolute; }
+  .feedback p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 10px 0;
+    color: #000; }
+  .feedback span {
+    color: #51B2A1; }
+  .feedback .oQuote,
+  .feedback .cQuote {
+    font-family: serif;
+    font-size: 60px; }
+  .feedback .oQuote {
+    position: absolute;
+    top: 12px;
+    left: -32px; }
+
+.cQuote {
+  position: relative;
+  display: inline-block;
+  line-height: 4px;
+  top: 21px;
+  vertical-align: middle;
+  left: 4px; }
+
+#feedback1 {
+  top: -230px;
+  left: 10%; }
+
+#feedback2 {
+  top: -230px;
+  left: 64%; }
+
+#feedback3 {
+  top: -45px;
+  left: -4%; }
+
+#feedback4 {
+  top: -45px;
+  left: 77%; }
+
+#feedback5 {
+  top: 150px;
+  left: 5%; }
+
+#feedback6 {
+  top: 150px;
+  left: 68%; }
+
+.fp-button {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300 !important;
+  margin: 0 auto 120px auto;
+  color: #fff;
+  width: 250px;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  text-decoration: none; }
+  .fp-button:hover {
+    text-decoration: none; }
+
+a.pl-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 190px; }
+
+a.pl-button,
+a.libButton {
+  margin-top: 100px;
+  color: #51B2A1;
+  border: 1px solid #51B2A1; }
+
+#libLogos {
+  position: relative;
+  height: 100px;
+  text-align: center;
+  margin: 425px 0 0 0; }
+
+.libLogos {
+  width: 80%;
+  margin: 0 auto;
+  display: none; }
+  .libLogos img {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px; }
+
+#requestBtn {
+  position: fixed;
+  z-index: 1000;
+  max-width: none;
+  background: #fff;
+  top: 11px;
+  right: 10px;
+  width: 135px;
+  padding: 7px;
+  border-color: #AAA;
+  color: #AAA;
+  font-size: 14px; }
+
+footer.fpFooter {
+  text-align: center;
+  height: 600px;
+  padding-top: 150px;
+  background: #51B2A1;
+  color: #fff; }
+  footer.fpFooter img {
+    display: block;
+    max-width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0; }
+  footer.fpFooter a {
+    text-decoration: none; }
+  footer.fpFooter ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 20px;
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto; }
+  footer.fpFooter li {
+    margin-bottom: 10px;
+    width: 25%;
+    float: left;
+    text-align: center; }
+  footer.fpFooter nav a {
+    color: #fff;
+    display: block;
+    height: 125px;
+    position: relative; }
+    footer.fpFooter nav a p {
+      text-align: bottom;
+      position: absolute;
+      top: 72%;
+      left: 0;
+      right: 0; }
+
+.spacer1 {
+  margin-bottom: 250px; }
+
+#lib-title,
+#blog-title {
+  text-align: center;
+  margin: 25px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #CCC; }
+
+.page-template-library-page .template-page {
+  padding-top: 0;
+  padding-left: 30px; }
+
+.page-template-library-page .container .av-content-small.units {
+  width: 85%; }
+
+.page-template-library-page .content {
+  border-left: none; }
+
+.page-template-library-page #top #main .sidebar_left .sidebar {
+  border-right: none; }
+
+.page-template-library-page .sidebar {
+  height: 100%;
+  background: #51B2A1;
+  padding-top: 10px;
+  margin-top: 50px;
+  color: #fff;
+  margin-top: 0;
+  border-right: none; }
+
+.page-template-library-page .main_color .sidebar a {
+  color: #fff;
+  text-align: left; }
+
+.page-template-library-page #menu-library-nav li {
+  background: #51B2A1;
+  padding-top: 0;
+  padding-left: 10px;
+  box-shadow: none;
+  font-size: 14px; }
+
+.page-template-library-page .flex_column {
+  width: 24%; }
+
+.page-template-library-page .av_one_fourth {
+  margin-left: 0.5%;
+  margin-right: 0.5%; }
+
+.page-template-library-page .column-top-margin {
+  margin-top: 30px; }
+
+.page-template-library-page .liblogo-display {
+  box-shadow: 2px 2px 5px #D4D4D4;
+  width: 100%;
+  height: 125px;
+  padding: 8px; }
+  .page-template-library-page .liblogo-display .avia-image-container-inner {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .page-template-library-page .liblogo-display .avia-image-container-inner img {
+      max-height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+  .page-template-library-page .liblogo-display .avia-image-container-inner a {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .page-template-library-page .liblogo-display .avia-image-container-inner a img {
+      max-height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+    .page-template-library-page .liblogo-display .avia-image-container-inner a:hover span.image-overlay {
+      display: none !important; }
+
+.container .av-content-small.units {
+  width: 85%; }
+
+.content {
+  border-left: none; }
+
+#top #main .sidebar_left .sidebar {
+  border-right: none; }
+
+.sidebar {
+  height: 100%;
+  background: #51B2A1;
+  padding-top: 10px;
+  margin-top: 50px;
+  color: #fff;
+  margin-top: 0;
+  border-right: none; }
+
+.main_color .sidebar a {
+  color: #fff;
+  text-align: left; }
+
+#menu-library-nav li {
+  background: #51B2A1;
+  padding-top: 0;
+  padding-left: 10px;
+  box-shadow: none;
+  font-size: 14px; }
+
+.flex_column {
+  width: 24%; }
+
+.av_one_fourth {
+  margin-left: 0.5%;
+  margin-right: 0.5%; }
+
+.column-top-margin {
+  margin-top: 30px; }
+
+.why-bib-txt {
+  margin-top: 60px;
+  text-align: center; }
+
+#taxonomy_list_widget-2 h3.widgettitle {
+  color: #FFF;
+  text-transform: none;
+  text-align: left;
+  padding-left: 10px;
+  border-bottom: 1px solid #BCC3C2;
+  padding-bottom: 5px; }
+
+.sidebar_left .inner_sidebar {
+  margin-right: 0; }
+
+.tlw-list {
+  text-align: left;
+  padding-left: 10px; }
+
+#taxonomy-tags {
+  background: #51B2A1;
+  color: #fff;
+  width: 15%;
+  float: left;
+  padding: 10px 0 50px 0; }
+  #taxonomy-tags h3, #taxonomy-tags a, #taxonomy-tags b {
+    color: #fff; }
+  #taxonomy-tags h3 {
+    border-bottom: 1px solid #BCC3C2;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    text-transform: none; }
+  #taxonomy-tags ul {
+    margin-left: 0;
+    padding: 0 10px 10px 10px; }
+
+#tag-page .template-page {
+  padding-left: 0; }
+
+#tag-page .units.alpha {
+  clear: none; }
+
+#tag-page .container .av-content-full.units {
+  float: right;
+  width: 82%;
+  margin-left: 3%;
+  padding-top: 0; }
+
+#top .fullsize .template-blog .post .entry-content-wrapper > * {
+  max-width: 700px; }
+
+#mc4wp-form-1 {
+  margin-top: 50px;
+  width: 250px;
+  margin: 0 auto; }
+  #mc4wp-form-1 input[type="text"],
+  #mc4wp-form-1 input[type="email"] {
+    width: 100%; }
+  #mc4wp-form-1 input[type="submit"] {
+    display: block;
+    border-radius: 2px;
+    width: 100px;
+    margin: 0 auto; }
+
+.page-template-blog-page #taxonomy-tags {
+  width: 17%; }
+
+.page-template-blog-page #tag-page .container .av-content-full.units {
+  width: 80%; }
+
+@media all and (max-width: 1090px) {
+  #libraryText1 {
+    left: -2%; }
+  #libraryText2 {
+    left: 69%; }
+  #connectGrp1 {
+    left: -2%; }
+  #connectGrp2 {
+    left: 66%; }
+  #bibFSearch,
+  #bibFBorrow {
+    left: 2%; }
+  #bibFExplore,
+  #bibFDoMore {
+    left: 64%; }
+  #bibFDoMore {
+    left: 61%; }
+  #feedback3 {
+    left: 0%; }
+  #feedback4 {
+    left: 70%; } }
+
+@media all and (max-width: 989px) {
+  .page-template-library-page .flex_column {
+    width: 32.33% !important;
+    margin-left: 0.5% !important;
+    clear: initial !important;
+    margin-top: 0 !important; } }
+
+iframe#twitter-widget-0 {
+  width: 100% !important;
+  margin: 0 auto;
+  display: block; }
+
+.twtr-hd {
+  display: none; }
+
+@media all and (max-width: 899px) {
+  #bibCore,
+  .progressBar,
+  #scrollText,
+  #startText,
+  .spacer1,
+  #storyText3,
+  #bibLove,
+  #iconServer,
+  #dataTrnf,
+  #libIcons,
+  #iconComp,
+  #signImg {
+    display: none; }
+  .html_header_top.html_header_sticky #top #wrap_all #main {
+    padding-top: 50px !important; }
+  .tagline {
+    position: static; }
+  .sceneContain {
+    height: auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #CCC; }
+  .overflow {
+    overflow: visible; }
+  .tagline {
+    font-size: 28px !important; }
+  #bibTitle span {
+    font-size: 28px !important; }
+  #mobile-advanced,
+  #advanced_menu_hide {
+    display: block; }
+  #advanced_menu_toggle {
+    display: block;
+    position: fixed;
+    top: 61px;
+    right: 0;
+    left: auto;
+    background-color: transparent;
+    color: #51B2A1; }
+  #header_main {
+    background: #FFF; }
+  .main_menu {
+    display: none; }
+  #requestBtn {
+    display: none; }
+  .logo {
+    padding-top: 8px !important; }
+  #bibTitle {
+    margin-bottom: 80px; }
+  #introText {
+    margin-bottom: 0; }
+  .drawerContainer2 {
+    height: 170px; }
+  #drawerContainer {
+    height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #CCC; }
+  #bibCoreF {
+    display: block;
+    position: relative;
+    margin-bottom: 30px; }
+  .bibFeature {
+    position: static;
+    float: left;
+    width: 40%;
+    margin: 0 5%; }
+    .bibFeature img {
+      display: none; }
+  .featDesc {
+    margin-left: 0;
+    width: 100%; }
+  #bibFExplore,
+  #bibFDoMore {
+    float: right;
+    width: 40%; }
+  #bibFSearch,
+  #bibFExplore {
+    height: 110px; }
+  #patronLogos,
+  .patronLogos2 {
+    position: static; }
+  .patronLogosL,
+  .patronLogosR {
+    float: none;
+    margin: 0 auto 30px auto;
+    width: 65%; }
+    .patronLogosL .logo1,
+    .patronLogosR .logo1 {
+      padding: 0 20px; }
+  .patronLogos2 {
+    width: 65%;
+    margin: 0 auto; }
+  .logo2 {
+    position: static;
+    float: left;
+    width: 33.33%; }
+    .logo2 img {
+      max-width: 100%; }
+  #bibLibrary section {
+    width: 70%; }
+  #libraryText1,
+  #libraryText2 {
+    position: static; }
+  #bibCoreL {
+    position: relative;
+    display: block;
+    height: 280px;
+    width: 280px; }
+  #libraryText1,
+  #libraryText2 {
+    margin: 0 auto;
+    text-align: center; }
+    #libraryText1 p,
+    #libraryText2 p {
+      font-size: 16px; }
+  #libraryText2 p {
+    margin-bottom: 0; }
+  .connectStat {
+    position: static; }
+  #connectGrp2,
+  .cLibr2,
+  .cLib1,
+  .cUser2,
+  .cUser4,
+  .cUser5,
+  .cUser6 {
+    display: none; }
+  #bibCoreC {
+    display: block;
+    top: 20px; }
+  #connectGrp1 {
+    opacity: 1;
+    position: relative;
+    margin: 0 auto;
+    top: 0; }
+  .cLibr1,
+  .cLibr3 {
+    top: 5px; }
+  .cLibr1,
+  .cUser1 {
+    left: -13px; }
+  .cLibr3,
+  .cUser3 {
+    left: 300px; }
+  .cUser1,
+  .cUser3 {
+    top: 215px; }
+  .cLib3 {
+    top: 100px;
+    left: -60px; }
+  .cLib2 {
+    top: 100px;
+    left: 330px; }
+  #connectStat3 p {
+    margin-bottom: 0; }
+  #storyTag3 {
+    display: none; }
+  #storyTag3b {
+    display: block; }
+  #perfink,
+  #bibPulse {
+    position: static; }
+  #storyTag1,
+  #storyTag2 {
+    width: 100%; }
+  #perfink {
+    margin-top: 25px;
+    padding-left: 4px; }
+  #pulseContainer {
+    display: block;
+    position: static;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    background: rgba(81, 178, 161, 0.3);
+    margin: 0 auto; }
+  #bibStory1 {
+    border-bottom: none;
+    padding-bottom: 0; }
+  #storyTag2 {
+    margin-bottom: 30px; }
+  #bibCoreS {
+    display: block;
+    position: static;
+    top: -295px; }
+  #storyText2R {
+    opacity: 1; }
+  #storyTag4 {
+    margin-bottom: 0; }
+  #bibCoreS2 {
+    display: block;
+    position: relative;
+    top: 0; }
+  #bibCatalog .catalogWrp {
+    width: 300px;
+    margin: 0 auto; }
+  #catalogTag {
+    display: block;
+    position: static; }
+  .cLrg,
+  .cSm {
+    height: 140px;
+    width: 140px; }
+    .cLrg h2,
+    .cSm h2 {
+      font-size: 20px !important;
+      line-height: 1.1em; }
+    .cLrg h4,
+    .cSm h4 {
+      line-height: 10px; }
+  .cBubble {
+    float: left;
+    position: static;
+    margin: 5px; }
+  .products-page #bibCatalog {
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 0;
+    border-bottom: none; }
+  .productPage #bibCore {
+    top: -240px; }
+  .productPage #bibCCMS,
+  .productPage #bibCDigital {
+    top: 20px; }
+  .productPage #bibCSummer,
+  .productPage #bibCReader {
+    top: 180px; }
+  .productPage #bibCEvents,
+  .productPage #bibCSuggest {
+    top: 340px; }
+  .productPage #bibCMobile,
+  .productPage #bibCBuy {
+    top: 500px; }
+  #patronLove {
+    padding-bottom: 0;
+    border-bottom: none; }
+  #patronTag {
+    display: block; }
+  .feedback {
+    position: relative;
+    margin: 0 0 20px 30px;
+    width: 90%; }
+  #feedback1,
+  #feedback2,
+  #feedback3,
+  #feedback4,
+  #feedback5,
+  #feedback6 {
+    top: 0;
+    left: 0; }
+  a.pl-button {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: static; }
+  #libLogos {
+    margin: 80px 0 50px 0;
+    height: auto; }
+  .libLogos {
+    display: block; }
+  .bx-wrapper {
+    display: none; }
+  a.libButton {
+    margin-top: 80px;
+    margin-bottom: 0; }
+  footer.fpFooter {
+    padding-top: 100px; }
+    footer.fpFooter a.demoButton {
+      margin-bottom: 80px; }
+    footer.fpFooter li {
+      width: 50%;
+      margin-bottom: 50px; }
+  #header_meta {
+    display: none; }
+  #header_main {
+    background: #F7F7F7; }
+    #header_main .container {
+      height: 46px !important; }
+  #advanced_menu_toggle {
+    border: none;
+    top: 23px; }
+    #advanced_menu_toggle:hover {
+      color: #F7F7F7; }
+  .responsive .logo {
+    position: fixed;
+    left: 10px; }
+  .responsive .logo img {
+    width: 147px; }
+  .responsive #top #wrap_all #header {
+    position: fixed;
+    top: 0; }
+  #mobile-advanced {
+    width: 50%;
+    right: -50%; }
+  #advanced_menu_hide {
+    right: 23px; }
+  .avia_transform3d .show_mobile_menu #mobile-advanced {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }
+
+@media all and (max-width: 768px) {
+  .responsive #header_main .container {
+    height: 46px !important; }
+  .responsive .logo {
+    height: 46px !important;
+    padding-top: 0px !important; }
+  a#scroll-top-link {
+    display: none; }
+  .drawerContainer2 {
+    width: 460px; }
+  #drBack {
+    left: 258px; }
+  #drLeft {
+    left: 92px; }
+  #drRight {
+    left: 232px; }
+  #drBottom {
+    left: 108px; }
+  #drFront {
+    left: 50px; }
+  #drCard1 {
+    left: 152px; }
+  #drCard2 {
+    left: 170px; }
+  #drCard3 {
+    left: 188px; }
+  #drCard4 {
+    left: 206px; }
+  #drCard5 {
+    left: 224px; }
+  #drCard6 {
+    left: 242px; }
+  #drCard7 {
+    left: 260px; }
+  #drCard8 {
+    left: 278px; }
+  .bibFeature {
+    width: 40%; }
+    .bibFeature .featDesc {
+      width: 100%; }
+  .featDesc h3 {
+    font-size: 18px; }
+  .featDesc p {
+    font-size: 16px; }
+  .feedback p {
+    font-size: 13px; }
+  .feedback .oQuote,
+  .feedback .cQuote {
+    font-size: 44px; }
+  .feedback .oQuote {
+    left: -24px; }
+  .feedback .cQuote {
+    top: 15px; }
+  #feedback4,
+  #feedback6 {
+    display: none; }
+  a.libButton {
+    margin-top: 60px; }
+  .page-template-blog-page #taxonomy-tags {
+    display: none; }
+  .page-template-blog-page #tag-page .container .av-content-full.units {
+    width: 100%; } }
+
+@media all and (max-width: 720px) {
+  .tagline {
+    font-size: 24px !important; }
+  #bibTitle span {
+    font-size: 24px !important; }
+  .patronLogosL,
+  .patronLogosR,
+  .patronLogos2 {
+    width: 80%; }
+  .connectStat p {
+    font-size: 18px; }
+    .connectStat p span {
+      font-size: 24px; } }
+
+@media all and (max-width: 570px) {
+  .bibFeature {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin: 0 0 20px 20px; }
+  #bibFSearch,
+  #bibFExplore {
+    height: auto; }
+  #bibFExplore,
+  #bibFDoMore {
+    width: 90%;
+    float: left; }
+  #bibFDoMore {
+    margin-bottom: 0; }
+  #bibLibrary section {
+    width: 90%; }
+  .page-template-library-page .flex_column {
+    width: 49% !important; } }
+
+@media all and (max-width: 480px) {
+  #mobile-advanced {
+    width: 100%;
+    right: -100%; }
+  .fpWrapper .tagline {
+    font-size: 20px !important;
+    margin-top: 15px; }
+    .fpWrapper .tagline br {
+      display: none; }
+  .sceneContain {
+    padding-bottom: 25px; }
+  #bibCoreF,
+  #bibCoreL,
+  #bibCoreC,
+  #bibCoreS,
+  #bibCoreS2 {
+    width: 200px;
+    height: 200px;
+    border-width: 10px; }
+  #bibCore {
+    top: -150px; }
+  .coreText {
+    top: 23%;
+    left: 16%;
+    font-size: 46px;
+    line-height: 32px; }
+    .coreText span {
+      font-size: 16px;
+      line-height: 16px; }
+  #bibTitle {
+    margin-bottom: 40px; }
+  .drawerContainer2 {
+    width: 270px; }
+    .drawerContainer2 img {
+      -ms-transform: scale(0.6);
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6); }
+  .drawerContainer2 {
+    height: 130px; }
+  #drBack {
+    left: 113px; }
+  #drLeft {
+    top: -4px;
+    left: 7px; }
+  #drRight {
+    top: -5px;
+    left: 94px; }
+  #drBottom {
+    top: 32px;
+    left: -4px; }
+  #drFront {
+    top: -18px;
+    left: -19px; }
+  #drCard1 {
+    top: 8px;
+    left: 64px; }
+  #drCard2 {
+    top: 3px;
+    left: 74px; }
+  #drCard3 {
+    top: -2px;
+    left: 84px; }
+  #drCard4 {
+    top: -7px;
+    left: 94px; }
+  #drCard5 {
+    top: -12px;
+    left: 104px; }
+  #drCard6 {
+    top: -17px;
+    left: 114px; }
+  #drCard7 {
+    top: -22px;
+    left: 124px; }
+  #drCard8 {
+    top: -27px;
+    left: 134px; }
+  .parallaxBack {
+    background: red;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 700px; }
+  #featTag {
+    width: 90%;
+    margin: 15px auto; }
+  #patronLogos {
+    margin-top: 20px; }
+  .patronLogosL,
+  .patronLogosR {
+    float: left;
+    width: 50%;
+    margin-bottom: 0; }
+  .patronLogosR {
+    float: right; }
+  .logo1 {
+    width: 100%; }
+  .patronLogos2 {
+    width: 50%;
+    margin: 0 auto; }
+  #patronLogo1,
+  #patronLogo2,
+  #patronLogo3 {
+    width: 100%;
+    text-align: center; }
+  #bibCoreL {
+    border: none;
+    background: transparent;
+    width: 90%;
+    height: auto; }
+  #librarianR {
+    display: none; }
+  #iconEventR,
+  #iconCommentR,
+  #iconListR,
+  #iconQuestionR {
+    position: static;
+    float: left;
+    width: 17%;
+    margin: 0 4%; }
+  .tagline span {
+    font-size: 16px; }
+  #bibCoreC,
+  .cLibr3,
+  .cLib2,
+  .cUser3 {
+    display: none; }
+  #connectGrp1 {
+    left: 0;
+    width: 250px;
+    height: 80px;
+    margin-bottom: 50px; }
+  .cLib3,
+  .cUser1 {
+    top: 10px; }
+  .cLib3 {
+    left: 93px;
+    width: 70px; }
+  .cLibr1 {
+    left: 190px; }
+  .cUser1 {
+    left: 0; }
+  .connectStat {
+    width: 100%; }
+    .connectStat p {
+      font-size: 17px; }
+  #pulseContainer,
+  #bibCoreS {
+    display: none; }
+  #perfink {
+    width: 200px; }
+  #storyTag2 {
+    margin-top: 15px; }
+  #bibStory2 {
+    padding-bottom: 0;
+    border-bottom: none; }
+  #storyTag3 {
+    width: 300px; }
+  #bibCatalog .catalogWrp {
+    width: 260px; }
+  .cLrg,
+  .cMed,
+  .cSm {
+    height: 120px;
+    width: 120px; }
+    .cLrg h2,
+    .cMed h2,
+    .cSm h2 {
+      font-size: 18px !important;
+      line-height: 1.1em; }
+    .cLrg h4,
+    .cMed h4,
+    .cSm h4 {
+      line-height: 10px; }
+  #bibCSummer h2 {
+    font-size: 16px !important; }
+  #bibCSuggest h2 {
+    font-size: 14px !important; }
+    #bibCSuggest h2 span {
+      font-size: 10px; }
+  #bibCCMS,
+  #bibCSummer,
+  #bibCEvents,
+  #bibCMobile {
+    left: 9%; }
+  .products-page #bibCatalog {
+    height: 470px; }
+  .productPage #bibCore img {
+    width: 165px; }
+  .productPage #bibCCMS,
+  .productPage #bibCDigital {
+    top: -30px; }
+  .productPage #bibCSummer,
+  .productPage #bibCReader {
+    top: 100px; }
+  .productPage #bibCEvents,
+  .productPage #bibCSuggest {
+    top: 230px; }
+  .productPage #bibCMobile,
+  .productPage #bibCBuy {
+    top: 360px; }
+  .oQuote, .cQuote {
+    display: none; }
+  #feedback2 {
+    display: none; }
+  #feedback1,
+  #feedback3,
+  #feedback5 {
+    margin-left: 10px; }
+  .fp-button {
+    width: 190px; }
+  #libLogos {
+    margin-top: 30px; }
+  .libLogos {
+    width: 45%; }
+    .libLogos img {
+      width: 100%;
+      margin-bottom: 40px; }
+  a.libButton {
+    margin-top: 10px;
+    margin-bottom: 40px; }
+  footer.fpFooter {
+    padding-top: 70px;
+    height: 730px; }
+    footer.fpFooter a.demoButton {
+      margin-bottom: 30px; }
+    footer.fpFooter img {
+      max-width: 75px;
+      max-height: 60px; }
+    footer.fpFooter li {
+      width: 100%;
+      margin-bottom: 10px; }
+  .page-template-library-page .flex_column {
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important; }
+  .page-template-blog-page #tag-page .container .av-content-full.units .entry-content-wrapper .entry-content > * {
+    font-size: 14px; }
+    .page-template-blog-page #tag-page .container .av-content-full.units .entry-content-wrapper .entry-content > * > * {
+      font-size: 14px; } }
